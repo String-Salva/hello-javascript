@@ -65,3 +65,6 @@ let setPrueba = new Set(arrayPrueba)
 
 setPrueba.delete(45)
 console.log(setPrueba)
+
+let mapTry = new Map([["Propietario", setPrueba]])
+console.log(mapTry)
