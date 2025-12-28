@@ -111,6 +111,6 @@ for (let i = 0; i < arrayNumeros.length; i++) {
   if (arrayNumeros[i] > 10) {
     nuevoArray.push(arrayNumeros[i])
   }
-  }
+}
 
 console.log(nuevoArray)
