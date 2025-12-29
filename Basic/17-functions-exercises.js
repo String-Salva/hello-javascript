@@ -47,7 +47,7 @@ console.log(numVocales(cadena))
 
 // 4. Crea una función que reciba un array de strings y devuelva un nuevo array con las strings en mayúsculas
 
-let strings = ["Andrés Tomás", "Salva", "Esperanza", "Cristobita","Gema","Denver"]
+let strings = ["Andrés Tomás", "Salva", "Esperanza", "Cristobita", "Gema", "Denver"]
 
 function convMayusculas(arrayAConvertir) {
   let nuevoArray = []
@@ -75,23 +75,73 @@ console.log(checkPrimo(64))
 
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos
 
-function repetidos(array1,array2) {
+function repetidos(array1, array2) {
   let array3 = []
 
-  for (let i = 0; array1.length; i++) {
-    if (array1.includes(array1[2])) {
+  for (let i = 0; i < array1.length; i++) {
+    if (array1.includes(array2[i])) {
       array3.push(array1[i])
     }
   }
   return array3
 }
-let nuevacadenA = ["Cristobita", "Salva","Antonio el de los palotes", "Denver", "Deku", "Luffy"]
-console.log(repetidos(strings,nuevacadenA))
+let nuevacadenA = ["Cristobita", "Salva", "Antonio el de los palotes", "Denver", "Deku", "Luffy"]
+console.log(repetidos(strings, nuevacadenA))
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
+function sumarPares(numerosRandom) {
+  let sumapares = 0;
+  for (let i = 0; i < numerosRandom.length; i++) {
+    if (numerosRandom[i] % 2 == 0) {
+      sumapares += numerosRandom[i];
+    }
+  }
+  return sumapares
+}
+
+let num = [1, 1, 1, 3, 3, 3, 5, 6, 7, 8, 3, 1330]
+
+console.log(sumarPares(num))
+
+
+
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado
+
+function arrayAlCuadrado(arrayA) {
+  let arrayResultado = []
+  for (let i = 0; i < arrayA.length; i++) {
+    arrayResultado.push(arrayA[i] ** 2)
+  }
+  return arrayResultado
+}
+
+let arrayPrueba = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+console.log(arrayAlCuadrado(arrayPrueba))
 
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
+function cadenaTexto(cadena1) {
+  let cadenaVacia = ""
+
+  for (let i = cadena1.length - 1; i >= 0; i--) {
+    cadenaVacia += cadena1[i]
+  }
+  return cadenaVacia
+}
+let vocales = "aeiou"
+console.log(cadenaTexto(vocales))
+
 // 10. Crea una función que calcule el factorial de un número dado
+
+function factorial(numero) {
+  let factorial = numero
+
+
+  for (let i = 1; i < numero; i++) {
+    factorial *= i 
+  }
+  return factorial
+}
+
+console.log(factorial(10))
